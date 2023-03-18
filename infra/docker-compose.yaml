@@ -6,7 +6,6 @@ volumes:
   media_value:
 
 services:
-  # db container
   db:
     image: postgres:13.0-alpine
     volumes:
@@ -14,7 +13,6 @@ services:
     env_file:
       - .env
 
-  # web container
   web:
     image: iliya1234/yamdb-final:latest
     restart: always
@@ -30,7 +28,6 @@ services:
     env_file:
       - .env
 
-  # nginx container
   nginx:
     image: nginx:1.21.3-alpine
     ports:
