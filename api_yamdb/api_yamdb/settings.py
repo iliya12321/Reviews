@@ -2,18 +2,13 @@ import os
 
 from datetime import timedelta
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv('SECRET_KEY', 'secret_key')
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = [os.getenv('HOST', 'allowed_hosts')]
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -77,8 +72,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = os.path.join(BASE_DIR, 'sent_emails')
 
 
-# Database
-
 DATABASES = {
     'default': {
         "ENGINE": os.getenv("DB_ENGINE", "django.db.backends.postgresql"),
@@ -89,8 +82,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT'),
     },
 }
-
-# Password validation
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -106,9 +97,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
-# Internationalization
 
 LANGUAGE_CODE = 'ru'
 
