@@ -1,5 +1,3 @@
-![yamdb_final event parameter](https://github.com/iliya12321/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
-
 # Проект YaMDb
 
 Сервис YaMDb — база отзывов о фильмах, книгах и музыке.
